@@ -1,0 +1,12 @@
+{
+  "name": "search-on-custom-fields",
+  "version": "1.0.0",
+  "author": "YUKiYURi WEB",
+  "scripts": {
+    "commit": "bash bin/git-commit.sh",
+    "push": "bash bin/git-push.sh",
+    "tag:push": "bash bin/git-tag-push.sh",
+    "tag:update": "bash bin/git-tag-update.sh",
+    "dist": "rm -f dist/$npm_package_name.$npm_package_version.zip; pushd ../; zip -r $npm_package_name/dist/$npm_package_name.$npm_package_version.zip $npm_package_name -x *.DS_Store $npm_package_name/.* $npm_package_name/.git/\\* $npm_package_name/bin/\\* $npm_package_name/dist/\\* $npm_package_name/tests/\\* $npm_package_name/scss/\\* $npm_package_name/composer.* $npm_package_name/gulpfile.babel.js $npm_package_name/package.json $npm_package_name/phpunit.xml.dist; popd"
+  }
+}
