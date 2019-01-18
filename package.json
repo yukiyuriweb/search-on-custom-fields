@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "author": "YUKiYURi WEB",
   "scripts": {
+    "test": "phpunit",
+    "test:watch": "phpunit-watcher watch",
     "commit": "bash bin/git-commit.sh",
     "push": "bash bin/git-push.sh",
     "tag:push": "bash bin/git-tag-push.sh",
