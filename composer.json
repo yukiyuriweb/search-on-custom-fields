@@ -1,0 +1,26 @@
+{
+  "name": "yukiyuriweb/search-on-custom-fields",
+  "type": "wp-plugin",
+  "autoload": {
+    "files": [
+      "plugins/plugin-update-checker/plugin-update-checker.php",
+      "includes/class-filter.php",
+      "includes/helpers.php"
+    ]
+  },
+  "require": {
+  },
+  "scripts": {
+    "test": [
+      "phpunit"
+    ],
+    "test:watch": [
+      "phpunit-watcher watch"
+    ],
+    "test:install": [
+      "mkdir -p vendor/bin",
+      "ln -fs ~/.composer/vendor/bin/phpunit vendor/bin/phpunit",
+      "bash bin/install-wp-tests.sh wp-test root '' localhost latest"
+    ]
+  }
+}
